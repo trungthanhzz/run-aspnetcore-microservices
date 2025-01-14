@@ -4,12 +4,10 @@ using MassTransit;
 
 namespace Basket.API.Basket.CheckoutBasket;
 
-public record CheckoutBasketCommand(BasketCheckoutDto BasketCheckoutDto) 
-    : ICommand<CheckoutBasketResult>;
+public record CheckoutBasketCommand(BasketCheckoutDto BasketCheckoutDto) : ICommand<CheckoutBasketResult>;
 public record CheckoutBasketResult(bool IsSuccess);
 
-public class CheckoutBasketCommandValidator 
-    : AbstractValidator<CheckoutBasketCommand>
+public class CheckoutBasketCommandValidator : AbstractValidator<CheckoutBasketCommand>
 {
     public CheckoutBasketCommandValidator()
     {
